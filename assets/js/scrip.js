@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $('.menu-icon').click(function() {
-    $('.nav-menu').toggleClass('active');
-  });
-});
+// $(document).ready(function() {
+//   $('.menu-icon').click(function() {
+//     $('.nav-menu').toggleClass('active');
+//   });
+// });
