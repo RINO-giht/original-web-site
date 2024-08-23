@@ -1,6 +1,14 @@
-// $('#menu-footer a[href*="#"]').click(function () {
-//     var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
-//     var pos = $(elmHash).offset().top;  //idの上部の距離を取得
-//     $('body,html').animate({scrollTop: pos}, 800); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
-//     return false;
-// });
+document.querySelectorAll('#menu-footer a').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault(); // デフォルトのジャンプ動作を防ぐ
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth' // スムーズにスクロールする
+            });
+        }
+    });
+});
