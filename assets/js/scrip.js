@@ -30,5 +30,44 @@ function autoShowSlides() {
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(autoShowSlides, 4000); // 4秒ごとにスライドが切り替わる
+    setTimeout(autoShowSlides, 6000); // 4秒ごとにスライドが切り替わる
 }
+
+// function toggleMenu() {
+//     const menu = document.querySelector(".menu-more");
+//     if (menu.style.display === "none" || menu.style.display === "") {
+//       menu.style.display = "block";
+//       button.classList.add("active");
+//     } else {
+//       menu.style.display = "none";
+//       button.classList.remove("active");
+//     }
+//   }
+
+function toggleMenu() {
+    var moreMenu = document.querySelector(".more");
+    if (moreMenu.style.display === "none" || moreMenu.style.display === "") {
+        moreMenu.style.display = "block";
+    } else {
+        moreMenu.style.display = "none";
+    }
+}
+
+
+
+document.querySelectorAll('.qa-1').forEach(item => {
+    item.addEventListener('click', () => {
+      const arrowIcon = item.querySelector('i');
+      const qa2 = item.nextElementSibling;
+  
+      if (qa2.style.display === 'none' || qa2.style.display === '') {
+        qa2.style.display = 'block';
+        arrowIcon.classList.remove('fa-chevron-down');
+        arrowIcon.classList.add('fa-chevron-up');
+      } else {
+        qa2.style.display = 'none';
+        arrowIcon.classList.remove('fa-chevron-up');
+        arrowIcon.classList.add('fa-chevron-down');
+      }
+    });
+  });

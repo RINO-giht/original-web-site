@@ -67,7 +67,7 @@ header{
   margin: 5rem;
 }
 .img-box{
-  margin-right: 5rem;
+  margin: 5rem;
 }
 .img-about-img {
     margin-right: 5rem;
@@ -87,6 +87,7 @@ header{
 }
 .menu-h4{
   color: #a6a6a6;
+  margin: 3rem;
 }
 .menu-box{
   height: auto;
@@ -107,17 +108,20 @@ header{
 }
 
 
-.menu-button {
+#menu-button {
   background-color: white;
   color: black;
   border-bottom: solid 1px black;
   padding: 10px 20px;
   cursor: pointer;
   float:right;
+  font-size: 16px;
+  margin-right: 5rem;
 }
 .more:hover .menu-more {
   display: block;
 }
+
 
 
 
@@ -154,7 +158,7 @@ header{
 }
 
 .slideshow-container {
-  max-width: 100%;
+  max-width: 80%;
   position: relative;
   margin: auto;
 }
@@ -165,7 +169,7 @@ header{
 
 .mySlides img {
   width: 100%;
-  height: 100vh; /* 高さを自動で調整 */
+  height: 70vh; /* 高さを自動で調整 */
 }
 
 /* ドットナビゲーションのスタイル */
@@ -178,6 +182,7 @@ header{
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  margin-bottom: 5rem
 }
 
 .active, .dot:hover {
@@ -189,7 +194,7 @@ header{
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
 }
 
 @-webkit-keyframes fade {
@@ -258,13 +263,19 @@ header{
   border-bottom: solid 1px black;
 }
 .qa-1{
-  width: 80%;
+  width: 1000%;
   font-weight:bold;
+  display: flex;
+  justify-content: space-between; 
+  cursor: pointer; 
+}
+.fas{
+  margin-left: 5rem;
 }
 .qa-2{
   width: 80%;
+  display: none;
 }
-
 .catch{
   display: flex;
   margin: 0;
@@ -296,7 +307,7 @@ header{
 }
 #menu-footer li{
   list-style: none;
-  font-size: 20px;
+  font-size: 25px;
 }
 #menu-footer li a{
   color: #333;
@@ -315,12 +326,12 @@ header{
   display: flex;
   justify-content: flex-end
 }
-/* .instagram{
-  margin: 5rem;
+.instagram{
+  margin-right: 1rem;
 }
 .line{
-  margin: 5rem;
-} */
+  margin-right: 2rem;
+}
 
 .footer-img{
   display: flex;

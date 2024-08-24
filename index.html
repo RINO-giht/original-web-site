@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="./assets/css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <header class="header">  
@@ -51,19 +52,19 @@
       <div class="img-about">
         <div class="img-box">
           <img src="./assets/img/about-1.jpg" alt="マツエク" class="img-about-img">
-            <h2>初めての方でも安心。</h2>
+            <h2 style="margin-top: 3rem;">初めての方でも安心。</h2>
             <p>初めてお越しの方にもオススメのカウンセリングプランあり。<br>＊メニューでカウンセリングをご選択ください</p>
         </div>
 
         <div class="img-box">
           <img src="./assets/img/about-2.jpg" alt="マツエク" class="img-about-img">
-            <h2>ホッと一息つける空間を。</h2>
+            <h2 style="margin-top: 3rem;">ホッと一息つける空間を。</h2>
             <p>下九沢エリアの隠れ家サロン。 <br>白を基調とした風通しの良い明るい店内を提供しております</p>
         </div>
 
         <div class="img-box">
           <img src="./assets/img/about-3.JPG" alt="マツエク" class="img-about-img">
-            <h2>自分に合うデザインを。</h2>
+            <h2 style="margin-top: 3rem;">自分に合うデザインを。</h2>
             <p>瞳の形やお客様に似合うデザインにてご案内致しております</p>
         </div>
       </div>
@@ -209,11 +210,11 @@
               <p>従来のセーブルラッシュより更に軽くなりました、自まつ毛をいたわりながらエクステを続けたい方、長持ちさせたい方はぜひお試しください！</p>
             </div>
           </div>
+        </div>
           
-          <div class="more">
-          <button class="menu-button">more</button>
+          <button id="menu-button" onclick="toggleMenu()">more</button>
 
-          <div class="menu-more">
+          <div class="more" style="display: none;">
 
             <div class="menu-box">
               <div class="menu-h2">
@@ -292,111 +293,112 @@
               <p>従来のセーブルラッシュより更に軽くなりました、自まつ毛をいたわりながらエクステを続けたい方、長持ちさせたい方はぜひお試しください！</p>
             </div>
           </div>
-    
-        </div>
-    
-      <div class="menu2">
-        <div class="menu-h4">
-          <h4>その他のまつげメニュー</h4>
-        </div>
-
-          <div class="menu-box">
-            <div class="menu-h2">
-              <div class="menu-w">
-              <h2>下まつ毛～20本まで、下まつ毛のみのかたは+1000になります</h2>
+          <div class="menu-more">
+            <div class="menu2">
+              <div class="menu-h4">
+                <h4>その他のまつげメニュー</h4>
               </div>
-              <h2 style="margin-left: 30rem;">¥1,100~</h2>
+      
+                <div class="menu-box">
+                  <div class="menu-h2">
+                    <div class="menu-w">
+                    <h2>下まつ毛～20本まで、下まつ毛のみのかたは+1000になります</h2>
+                    </div>
+                    <h2 style="margin-left: 30rem;">¥1,100~</h2>
+                  </div>
+          
+                  <div class="menu-p">
+                    <p>ナチュラルに可愛いくなっちゃう☆</p>
+                  </div>
+                </div>
+          
+                <div class="menu-box">
+                  <div class="menu-h2">
+                    <div class="menu-w">
+                    <h2>下まつ毛30分付け放 20本以上で個人差あり、下まつ毛のみの方は+1000になります</h2>
+                    </div>
+                    <h2 style="margin-left: 30rem;">¥2,100~</h2>
+                  </div>
+          
+                  <div class="menu-p">
+                    <p>更に可愛いくなっちゃう☆</p>
+                  </div>
+                </div>
+          
+                <div class="menu-box">
+                  <div class="menu-h2">
+                    <div class="menu-w">
+                    <h2>下まつ毛45分付け放 30本以上で個人差あり、下まつ毛のみの方には+1000になります</h2>
+                    </div>
+                    <h2 style="margin-left: 30rem;">¥4,100~</h2>
+                  </div>
+          
+                  <div class="menu-p">
+                    <p>どれだけ付くのかまずはチャレンジ☆</p>
+                  </div>
+                </div>
             </div>
-    
-            <div class="menu-p">
-              <p>ナチュラルに可愛いくなっちゃう☆</p>
-            </div>
-          </div>
-    
-          <div class="menu-box">
-            <div class="menu-h2">
-              <div class="menu-w">
-              <h2>下まつ毛30分付け放 20本以上で個人差あり、下まつ毛のみの方は+1000になります</h2>
+        
+            <div class="menu3">
+              <div class="menu-h4">
+                <h4>付替オフ  *付替オフメニューはまつげメニューとセットで予約してください。</h4>
               </div>
-              <h2 style="margin-left: 30rem;">¥2,100~</h2>
-            </div>
-    
-            <div class="menu-p">
-              <p>更に可愛いくなっちゃう☆</p>
-            </div>
-          </div>
-    
-          <div class="menu-box">
-            <div class="menu-h2">
-              <div class="menu-w">
-              <h2>下まつ毛45分付け放 30本以上で個人差あり、下まつ毛のみの方には+1000になります</h2>
+      
+                  <div class="menu-box">
+                    <div class="menu-h2">
+                      <div class="menu-w">
+                      <h2>オフ：オフ込みのメニューで今回付け替えをご希望の方はこちら</h2>
+                      </div>
+                      <h2 style="margin-left: 30rem;">¥0</h2>
+                    </div>
+                  
+                    <div class="menu-p">
+                      <p>セーブル120・140・160・つけ放題のメニューをお選びいただいた方でオフをご希望の方はこちらを選択してください</p>
+                    </div>
+                  </div>
+                  
+                  <div class="menu-box">
+                    <div class="menu-h2">
+                      <div class="menu-w">
+                      <h2>オフ</h2>
+                      </div>
+                      <h2 style="margin-left: 30rem;">¥500</h2>
+                    </div>
+                  
+                    <div class="menu-p">
+                      <p>当店・他店オフ</p>
+                    </div>
+                  </div>
+                  
+                  <div class="menu-box">
+                    <div class="menu-h2">
+                      <div class="menu-w">
+                      <h2>オフなし☆美容成分配合のアイシャンプーでしっかり汚れを落として健やかに保つ
+                      </div>
+                      <h2 style="margin-left: 30rem;">¥500</h2>
+                    </div>
+            
+                    <div class="menu-p">
+                      <p>エクステで落としにくくなったまつ毛の際までキレイにお掃除！まつ毛の環境を整える目元のシャンプー★付け足しの方にも人気のメニュー</p>
+                    </div>
+                  </div>
+        
+                  <div class="menu-box">
+                    <div class="menu-h2">
+                      <div class="menu-w">
+                      <h2>オフあり☆美容成分配合のアイシャンプーでしっかり汚れを落として健やかに保つ</h2>
+                      </div>
+                      <h2 style="margin-left: 30rem;">¥900</h2>
+                    </div>
+            
+                    <div class="menu-p">
+                      <p>エクステで落としにくくなったまつ毛の際までキレイにお掃除！まつ毛の環境を整える目元のシャンプー</p>
+                    </div>
+                  </div>
               </div>
-              <h2 style="margin-left: 30rem;">¥4,100~</h2>
-            </div>
-    
-            <div class="menu-p">
-              <p>どれだけ付くのかまずはチャレンジ☆</p>
-            </div>
-          </div>
       </div>
-  
-      <div class="menu3">
-        <div class="menu-h4">
-          <h4>付替オフ  *付替オフメニューはまつげメニューとセットで予約してください。</h4>
-        </div>
-
-            <div class="menu-box">
-              <div class="menu-h2">
-                <div class="menu-w">
-                <h2>オフ：オフ込みのメニューで今回付け替えをご希望の方はこちら</h2>
-                </div>
-                <h2 style="margin-left: 30rem;">¥0</h2>
-              </div>
-            
-              <div class="menu-p">
-                <p>セーブル120・140・160・つけ放題のメニューをお選びいただいた方でオフをご希望の方はこちらを選択してください</p>
-              </div>
-            </div>
-            
-            <div class="menu-box">
-              <div class="menu-h2">
-                <div class="menu-w">
-                <h2>オフ</h2>
-                </div>
-                <h2 style="margin-left: 30rem;">¥500</h2>
-              </div>
-            
-              <div class="menu-p">
-                <p>当店・他店オフ</p>
-              </div>
-            </div>
-            
-            <div class="menu-box">
-              <div class="menu-h2">
-                <div class="menu-w">
-                <h2>オフなし☆美容成分配合のアイシャンプーでしっかり汚れを落として健やかに保つ
-                </div>
-                <h2 style="margin-left: 30rem;">¥500</h2>
-              </div>
+    
       
-              <div class="menu-p">
-                <p>エクステで落としにくくなったまつ毛の際までキレイにお掃除！まつ毛の環境を整える目元のシャンプー★付け足しの方にも人気のメニュー</p>
-              </div>
-            </div>
-  
-            <div class="menu-box">
-              <div class="menu-h2">
-                <div class="menu-w">
-                <h2>オフあり☆美容成分配合のアイシャンプーでしっかり汚れを落として健やかに保つ</h2>
-                </div>
-                <h2 style="margin-left: 30rem;">¥900</h2>
-              </div>
-      
-              <div class="menu-p">
-                <p>エクステで落としにくくなったまつ毛の際までキレイにお掃除！まつ毛の環境を整える目元のシャンプー</p>
-              </div>
-            </div>
-        </div>
 
         <div class="menu4">
           <div class="menu-h4">
@@ -415,10 +417,8 @@
               <p>オフのみのメニューになります</p>
             </div>
           </div>
-        </div>
 
-      </div>
-      </div>
+        </div>
 
     </section>  
 
@@ -570,7 +570,7 @@
 
       <div class="qa-box">
         <div class="qa-1">
-          <p>駐車場はありますか？</p>
+          <p>駐車場はありますか？<i class="fas fa-chevron-down"></i></p>
         </div>
         <div class="qa-2">
           <p>あります。 <br>【わかば名店街お客様専用駐車場】と書いてある所にお停めください、シルバーのごみ置き場があります。</p>
@@ -579,7 +579,7 @@
 
       <div class="qa-box">
         <div class="qa-1">
-          <p>お支払い方法を教えてください</p>
+          <p>お支払い方法を教えてください<i class="fas fa-chevron-down"></i></p>
         </div>
         <div class="qa-2">
           <p>現金/Visa/Mastercard/JCB/American Express/Pay Pay/楽天Pay</p>
@@ -588,7 +588,7 @@
 
       <div class="qa-box">
         <div class="qa-1">
-          <p>来店時に必要なものはありますか？</p>
+          <p>来店時に必要なものはありますか？<i class="fas fa-chevron-down"></i></p>
         </div>
         <div class="qa-2">
           <p>ハードコンタクト等をご使用の方は、専用のケースと洗浄液をご持参ください。</p>
@@ -597,7 +597,7 @@
 
       <div class="qa-box">
         <div class="qa-1">
-          <p>メイクはしてきても大丈夫ですか？</p>
+          <p>メイクはしてきても大丈夫ですか？<i class="fas fa-chevron-down"></i></p>
         </div>
         <div class="qa-2">
           <p>ビューラーとマスカラ以外のメイクは大丈夫です</p>
@@ -606,7 +606,7 @@
 
       <div class="qa-box">
         <div class="qa-1">
-          <p>予約なしの来店はできますか？</p>
+          <p>予約なしの来店はできますか？<i class="fas fa-chevron-down"></i></p>
         </div>
         <div class="qa-2">
           <p>基本、お断りさせて頂いております。</p>
@@ -615,7 +615,7 @@
 
       <div class="qa-box">
         <div class="qa-1">
-          <p>電話での予約はできますか？</p>
+          <p>電話での予約はできますか？<i class="fas fa-chevron-down"></i></p>
         </div>
         <div class="qa-2">
           <p>施術中はお電話に出られないことが多い為、WebやLINEでの予約をお願いしております。</p>
@@ -648,7 +648,7 @@
 
     <div class="icon">
       <a href="https://www.instagram.com/lameme14/"  target="_blank" class="instagram"><i class="fa-brands fa-instagram fa-3x"></i></a>
-      <a href=""><i class="fa-brands fa-line fa-3x" class="line"></i></a>
+      <a href="" class="line"><i class="fa-brands fa-line fa-3x"></i></a>
     </div>
 
     <div class="footer-img">
