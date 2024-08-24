@@ -71,3 +71,14 @@ document.querySelectorAll('.qa-1').forEach(item => {
       }
     });
   });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuBtn = document.querySelector(".menu-btn");
+    const menuContents = document.querySelector(".menu-contents");
+  
+    menuBtn.addEventListener("click", function() {
+      this.classList.toggle("active");
+      menuContents.classList.toggle("show");
+    });
+  });
