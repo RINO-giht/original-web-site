@@ -1,22 +1,23 @@
 header{
-  /* position: fixed; */
-  /* width: 100%; */
-  top: 0;
-  left: 0;
-  right: 0;
+  position: fixed;
+  width: 100%;
+  top: -100%;
   background-color: #c3c3c3;
-  padding: 10px 0;
+  padding: 0.3rem;
+  transition: top 0.3s ease;
   z-index: 1000; 
 }
 .container{
   display: flex;
-  justify-content: center;
-  align-content: center;
-
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
-.menu{
-  display: inline;
-  }
+.hero{
+  height: 100vh; 
+  position: relative;
+  overflow: hidden;
+}
 .menu-btn{
   width: 5rem;
   height: 6px;
@@ -106,24 +107,60 @@ header{
 
 
 .logo {
-    display: flex;
-    justify-content: center;
+  flex-grow: 1; 
+  text-align: center;
+  padding: 0.5rem; 
+  margin-left: 550px;
 }
 
 .img-logo {
-  width: 300px;
-  height: auto;
-  display: flex;
-  justify-content: center;
+  width: auto;
+  height: 60px;
+  /* flex-grow: 1;
+  text-align: center;
+  padding: 0 20px; */
 }
+
+
 .img-top{
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+.hero-logo {
+  position: absolute;
+  top: 50%; /* 縦中央 */
+  left: 50%; /* 横中央 */
+  transform: translate(-50%, -50%); /* 中央に配置 */
+  z-index: 10; /* 画像の上に表示 */
+}
+.img-hero-logo {
+  width: 100vw; /* ロゴの幅を調整 */
+  height: auto;
+}
+.header.visible {
+  top: 0;
 }
 .news-font{
   display: flex; 
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   margin-right: 5rem;
+  text-decoration: none;
+  font-size: 15px;
+}
+.news{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%); 
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: green;
+  padding: 0 10rem;
+  border-radius: 5px;
+  text-align: center;
 }
 
 
@@ -141,15 +178,17 @@ header{
 }
 .img-about{
   display: flex;
-  justify-content: space-between;
-  margin: 5rem;
+  justify-content: space-around;
 }
 .img-box{
   margin: 5rem;
 }
+.number {
+  font-size: 60px;
+}
 .img-about-img {
     margin-right: 5rem;
-    width: 300px;
+    width: 500px;
     height: 300px; 
     object-fit: cover;
 }

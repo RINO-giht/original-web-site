@@ -1,3 +1,19 @@
+//Heroメニュー
+window.addEventListener("scroll", function() {
+    const header = document.querySelector(".header");
+    const hero = document.querySelector(".hero");
+
+    if (window.scrollY > hero.offsetHeight) {
+        header.classList.add("visible");
+    } else {
+        header.classList.remove("visible");
+    }
+});
+
+
+
+
+//fooderのスクロール
 document.querySelectorAll('#menu-footer a').forEach(anchor => {
     anchor.addEventListener('click', function(event) {
         event.preventDefault(); // デフォルトのジャンプ動作を防ぐ
@@ -16,6 +32,7 @@ document.querySelectorAll('#menu-footer a').forEach(anchor => {
 let slideIndex = 0;
 autoShowSlides();
 
+//スライドショー
 function autoShowSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
@@ -44,17 +61,22 @@ function autoShowSlides() {
 //     }
 //   }
 
+//メニューの開閉
 function toggleMenu() {
-    var moreMenu = document.querySelector(".more");
+    const moreMenu = document.querySelector(".more");
+
     if (moreMenu.style.display === "none" || moreMenu.style.display === "") {
         moreMenu.style.display = "block";
     } else {
         moreMenu.style.display = "none";
     }
 }
+document.querySelector(".more").addEventListener("click", function() {
+    this.style.display = "none"; // moreMenu自体を非表示にする
+});
 
 
-
+//質問の開閉
 document.querySelectorAll('.qa-1').forEach(item => {
     item.addEventListener('click', () => {
       const arrowIcon = item.querySelector('i');
@@ -72,7 +94,7 @@ document.querySelectorAll('.qa-1').forEach(item => {
     });
   });
 
-
+//ハンバーガーメニュー
   document.addEventListener("DOMContentLoaded", function() {
     const menuBtn = document.querySelector(".menu-btn");
     const menuContents = document.querySelector(".menu-contents");
