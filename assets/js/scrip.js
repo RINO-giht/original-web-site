@@ -12,7 +12,6 @@ window.addEventListener("scroll", function() {
 
 
 
-
 //fooderのスクロール
 document.querySelectorAll('#menu-footer a').forEach(anchor => {
     anchor.addEventListener('click', function(event) {
@@ -50,16 +49,7 @@ function autoShowSlides() {
     setTimeout(autoShowSlides, 6000); // 4秒ごとにスライドが切り替わる
 }
 
-// function toggleMenu() {
-//     const menu = document.querySelector(".menu-more");
-//     if (menu.style.display === "none" || menu.style.display === "") {
-//       menu.style.display = "block";
-//       button.classList.add("active");
-//     } else {
-//       menu.style.display = "none";
-//       button.classList.remove("active");
-//     }
-//   }
+
 
 //メニューの開閉
 function toggleMenu() {
@@ -95,12 +85,22 @@ document.querySelectorAll('.qa-1').forEach(item => {
   });
 
 //ハンバーガーメニュー
+
   document.addEventListener("DOMContentLoaded", function() {
     const menuBtn = document.querySelector(".menu-btn");
     const menuContents = document.querySelector(".menu-contents");
-  
+    const links = document.querySelectorAll(".header-menu a");
+
     menuBtn.addEventListener("click", function() {
-      this.classList.toggle("active");
-      menuContents.classList.toggle("show");
+        this.classList.toggle("active");
+        menuContents.classList.toggle("show");
     });
-  });
+
+    links.forEach(link => {
+        link.addEventListener("click", function() {
+            // ハンバーガーメニューを閉じる
+            menuBtn.classList.remove("active");
+            menuContents.classList.remove("show");
+        });
+    });
+});

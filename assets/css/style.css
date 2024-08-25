@@ -93,6 +93,7 @@ header{
 
 .header-menu li {
   margin: 1rem 0;
+  display: block;
 }
 
 .header-menu a {
@@ -103,16 +104,12 @@ header{
   text-align: center;
   padding: 1rem;
 }
-
-
-
 .logo {
   flex-grow: 1; 
   text-align: center;
   padding: 0.5rem; 
   margin-left: 550px;
 }
-
 .img-logo {
   width: auto;
   height: 60px;
@@ -120,8 +117,6 @@ header{
   text-align: center;
   padding: 0 20px; */
 }
-
-
 .img-top{
   width: 100%;
   height: 100%;
@@ -162,6 +157,92 @@ header{
   border-radius: 5px;
   text-align: center;
 }
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .menu-btn {
+    width: 4rem;
+    height: 4px;
+    margin: 5px;
+  }
+
+  .menu-btn .line {
+    width: 2rem;
+    height: 4px;
+  }
+
+  .header-menu a {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .logo {
+    margin-left: 0;
+    padding: 0.5rem;
+  }
+
+  .img-logo {
+    height: 50px;
+  }
+
+  .news {
+    padding: 0 2rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .menu-btn {
+    width: 4.5rem;
+    height: 5px;
+    margin: 8px;
+  }
+
+  .menu-btn .line {
+    width: 2.2rem;
+    height: 4px;
+  }
+
+  .header-menu a {
+    font-size: 1.3rem;
+    padding: 0.9rem;
+  }
+
+  .logo {
+    margin-left: 300px;
+    padding: 0.5rem;
+  }
+
+  .img-logo {
+    height: 55px;
+  }
+
+  .news {
+    padding: 0 5rem;
+    font-size: 1rem;
+  }
+}
+
 
 
 .title{
@@ -392,6 +473,7 @@ header{
 .qa-2{
   width: 80%;
   display: none;
+  margin-top: 2rem;
 }
 .catch{
   display: flex;
