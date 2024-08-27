@@ -11,6 +11,18 @@ window.addEventListener("scroll", function() {
 });
 
 
+//スライドに合わせて暗くする
+window.addEventListener('scroll', function() {
+    const scrolled = window.scrollY;
+    const hero = document.querySelector('.hero');
+  
+    // スクロール量に基づいて画像のぼかしと明るさを変化させる
+    const blurValue = Math.min(scrolled * 0.03, 2); // 最大5pxのぼかし
+    const brightnessValue = 1 - (scrolled * 0.0009); // スクロールに応じて暗くする
+  
+    hero.style.filter = `blur(${blurValue}px) brightness(${brightnessValue})`;
+  });
+
 
 //fooderのスクロール
 document.querySelectorAll('#menu-footer a').forEach(anchor => {
@@ -46,7 +58,7 @@ function autoShowSlides() {
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(autoShowSlides, 6000); // 4秒ごとにスライドが切り替わる
+    setTimeout(autoShowSlides, 5000); 
 }
 
 
