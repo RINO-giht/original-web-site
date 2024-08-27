@@ -1,11 +1,13 @@
 header{
   position: fixed;
   width: 100%;
-  top: -100%;
+  top: -50%;
   background-color: #c3c3c3;
   padding: 0.3rem;
-  transition: top 0.3s ease;
+  transition: top 0.3s ease, opacity 0.3s ease;
   z-index: 1000; 
+
+  opacity: 0;
 }
 
 .container{
@@ -41,7 +43,6 @@ header{
   position: relative;
   z-index: 1000;
 }
-
 .menu-btn .line {
   display: block;
   width: 2.5rem;
@@ -50,31 +51,24 @@ header{
   transition: transform 0.3s, opacity 0.3s;
   border-radius: 1px;
 }
-
 .menu-btn .line-1 {
   transform: translateY(-0.5rem);
 }
-
 .menu-btn .line-2 {
   transform: translateY(0);
 }
-
 .menu-btn .line-3 {
   transform: translateY(0.5rem);
 }
-
 .menu-btn.active .line-1 {
   transform: rotateZ(45deg) translateY(0.5rem);
 }
-
 .menu-btn.active .line-2 {
   opacity: 0;
 }
-
 .menu-btn.active .line-3 {
   transform: rotateZ(-45deg) translateY(-0.5rem);
 }
-
 .menu-contents {
   display: none;
   position: fixed;
@@ -86,23 +80,19 @@ header{
   z-index: 999;
   overflow: auto;
 }
-
 .menu-contents.show {
   display: block;
   transform: translateX(0);
 }
-
 .header-menu {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .header-menu li {
   margin: 1rem 0;
   display: block;
 }
-
 .header-menu a {
   text-decoration: none;
   color: black;
@@ -145,9 +135,8 @@ header{
 .header.visible {
   top: 0;
 }
-.news-font{
+/* .news-font{
   display: flex; 
-  /* justify-content: flex-end; */
   margin-right: 5rem;
   text-decoration: none;
   font-size: 15px;
@@ -164,7 +153,7 @@ header{
   padding: 0 10rem;
   border-radius: 5px;
   text-align: center;
-}
+} */
 
 /* Mobile Styles */
 @media (max-width: 767px) {
@@ -193,6 +182,9 @@ header{
   .logo {
     margin-left: 0;
     padding: 0.5rem;
+  }
+  .img-top{
+    object-position: 40% 60%; 
   }
   .img-logo {
     height: 50px;
@@ -230,7 +222,6 @@ header{
     font-size: 1.3rem;
     padding: 0.9rem;
   }
-
   .logo {
     margin-left: 300px;
     padding: 0.5rem;
@@ -261,6 +252,54 @@ header{
   }
 }
 
+.fixed-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 1rem;
+  height: 150px;
+  width: 200px;
+  background-color: #717171;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; 
+  transition: background-color 0.3s ease; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+.fixed-button:hover {
+  background-color: purple; 
+}
+
+/* タブレット */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fixed-button {
+    height: 150px; 
+    width: 160px; 
+    right: 40px; 
+    bottom: 15px; 
+    font-size: 14px; 
+    padding: 0.75rem;
+  }
+}
+/* スマホ */
+@media (max-width: 767px) {
+  .fixed-button {
+    height: 80px;  
+    width: 90px;
+    right: 20px; 
+    bottom: 15px; 
+    font-size: 12px; 
+    padding: 0.5rem; 
+  }
+}
+
+
 .section1{
   background-color: #c3c3c3;
   width: 100%;
@@ -284,6 +323,15 @@ header{
     width: 500px;
     height: 300px; 
     object-fit: cover;
+}
+.about-h1{
+  margin-top: 4rem;
+  letter-spacing: 0.05rem;
+}
+.about-p{
+  margin-top: 3rem;
+  font-size: 20px;
+  letter-spacing: 0.05rem;
 }
 
 /* タブレット */
@@ -692,7 +740,7 @@ header{
 
 .map{
   margin: 5rem;
-  width: 100%;
+  width: 80%;
 }
 .access-maenu{
   padding: 4rem;
@@ -712,6 +760,7 @@ header{
   font-size: 17px;
   width: 70%;
   margin-right: 5rem;
+  letter-spacing: 0.05rem;
 }
 
 /* タブレット */
@@ -771,14 +820,14 @@ header{
   border-bottom: solid 1px black;
 }
 .qa-1{
-  width: 1000%;
+  width: 100%;
   font-weight:bold;
   display: flex;
   justify-content: space-between; 
   cursor: pointer; 
 }
 .fas{
-  margin-left: 5rem;
+  padding-right: 30px;
 }
 .qa-2{
   width: 80%;
