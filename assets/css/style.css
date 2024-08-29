@@ -982,8 +982,8 @@ header{
 .footer{
   background-color: #c3c3c3;
   width: 100%;
-  height: 100%;
-  padding-top: 5rem;
+  height: 90%;
+  padding-top: 15rem;
   padding-bottom: 5rem;
   border-top: solid 1px black;
 }
