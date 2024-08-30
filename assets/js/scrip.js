@@ -73,7 +73,7 @@ function autoShowSlides() {
 
 //メニューの開閉
 function toggleMenu() {
-  const moreMenu = document.querySelector(".more");  
+  const moreMenu = document.querySelector(".more");
     if (moreMenu.style.display === "none" || moreMenu.style.display === "") {
       moreMenu.style.display = "block";
   } else {
